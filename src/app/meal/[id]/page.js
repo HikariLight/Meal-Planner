@@ -1,5 +1,6 @@
 import { getMeal, getIngredientData } from "@/app/serverActions"
 import FoodSearchResultCard from "@/app/FoodSearchResultCard"
+import DeleteMealButton from "./DeleteMealButton"
 
 export default async function MealPage({ params }) {
     const mealData = await getMeal(params.id)
@@ -23,6 +24,7 @@ export default async function MealPage({ params }) {
                 )
             })}
 
+            <DeleteMealButton mealId={params.id} />
         </div>
     )
 }
