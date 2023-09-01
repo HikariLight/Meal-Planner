@@ -23,3 +23,8 @@ export async function getMeals() {
     const { data, error } = await supabase.from("meals").select()
     return data
 }
+
+export async function createMeal(name, ingredients) {
+    const { error } = await supabase.from("meals").insert({ name, ingredients })
+    return error
+}
