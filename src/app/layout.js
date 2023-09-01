@@ -19,7 +19,9 @@ export default function RootLayout({ children }) {
                         <Navbar />
                     </div>
 
-                    <div className="h-[94vh] overflow-auto">{children}</div>
+                    <div className="h-[94vh] overflow-auto grid place-items-center">
+                        {children}
+                    </div>
 
                     <div className="h-[3vh]">
                         <Footer />
