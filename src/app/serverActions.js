@@ -6,3 +6,8 @@ export async function searchFoodDatabase(searchQuery) {
     const data = await res.json()
     return data
 }
+
+export async function getMeals() {
+    const { data, error } = await supabase.from("meals").select()
+    return data
+}
