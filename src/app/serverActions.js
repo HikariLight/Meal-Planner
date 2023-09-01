@@ -7,6 +7,18 @@ export async function searchFoodDatabase(searchQuery) {
     return data
 }
 
+export async function getIngredientData(id) {
+    const apiLink = `https://api.nal.usda.gov/fdc/v1/food/${id}?api_key=${process.env.USDA_API_KEY}`
+    const res = await fetch(apiLink)
+    const data = await res.json()
+    return data
+}
+
+export async function getMeal(id) {
+    const { data, error } = await supabase.from("meals").select().eq("id", id)
+    return data
+}
+
 export async function getMeals() {
     const { data, error } = await supabase.from("meals").select()
     return data
