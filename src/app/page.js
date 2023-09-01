@@ -1,7 +1,7 @@
 "use client"
 import { useRef, useState } from "react"
 import FoodSearchResultCard from "./FoodSearchResultCard"
-import searchFoodDatabase from "./serverActions"
+import { searchFoodDatabase } from "./serverActions"
 
 export default function Home() {
     const inputBox = useRef()
