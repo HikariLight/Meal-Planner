@@ -13,7 +13,7 @@ export default async function MealPage() {
                 <div className="grid grid-cols-2 gap-2">
                     {meals.map((meal, index) => {
                         return (
-                            <Link href={`/meal/${meal.id}`}>
+                            <Link key={index} href={`/meal/${meal.id}`}>
                                 <MealCard mealData={meal} key={index} />
                             </Link>
                         )

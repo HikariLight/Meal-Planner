@@ -17,14 +17,14 @@ export default async function FoodPage({ params }) {
                 Description: {foodData.foodCategory.description}
             </h3>
 
-            {foodData.foodNutrients.map((data) => {
-                return (
-                    <h3>
-                        {data.nutrient.name}: {data.nutrient.number}
-                        {data.nutrient.unitName}
-                    </h3>
-                )
-            })}
+                {foodData.foodNutrients.map((data, index) => {
+                    return (
+                        <h3 key={index}>
+                            {data.nutrient.name}: {data.nutrient.number}
+                            {data.nutrient.unitName}
+                        </h3>
+                    )
+                })}
         </div>
     )
 }
