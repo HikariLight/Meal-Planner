@@ -7,8 +7,8 @@ export default async function MealPage() {
 
     return (
         <div className="h-full grid place-items-center">
-            <div>
-                <h1 className="text-2xl text-sky-950">Meal Page</h1>
+            <div className="flex flex-col items-center">
+                <h1 className="text-2xl text-sky-950 my-2">Meal Page</h1>
 
                 <div className="grid grid-cols-2 gap-2">
                     {meals.map((meal, index) => {
@@ -20,7 +20,7 @@ export default async function MealPage() {
                     })}
                 </div>
 
-                <button className="rounded-xl bg-sky-800 text-white p-2 my-2">
+                <button className="rounded-md bg-sky-800 text-white p-2 my-2">
                     <Link href="/meal/create">New Meal</Link>
                 </button>
             </div>
