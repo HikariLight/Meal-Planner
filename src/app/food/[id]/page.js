@@ -9,7 +9,7 @@ export default async function FoodPage({ params }) {
     const foodData = await getFood(params.id)
 
     return (
-        <div className="border border-purple-800 rounded text-center">
+        <div className="border border-purple-800 rounded text-center p-2">
             <h1 className="text-3xl my-2 text-emerald-800">
                 Name: {foodData.description}
             </h1>
@@ -17,6 +17,7 @@ export default async function FoodPage({ params }) {
                 Description: {foodData.foodCategory.description}
             </h3>
 
+            <div className="grid grid-cols-3">
                 {foodData.foodNutrients.map((data, index) => {
                     return (
                         <h3 key={index}>
@@ -25,6 +26,7 @@ export default async function FoodPage({ params }) {
                         </h3>
                     )
                 })}
+            </div>
         </div>
     )
 }
