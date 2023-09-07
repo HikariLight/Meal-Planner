@@ -1,27 +1,18 @@
-import { getMeal, getIngredientData } from "@/app/serverActions"
-import FoodSearchResultCard from "@/app/FoodSearchResultCard"
+import { getMeal } from "@/app/serverActions"
 import DeleteMealButton from "./DeleteMealButton"
+import IngredientCard from "./IngredientCard"
 
 export default async function MealPage({ params }) {
     const mealData = await getMeal(params.id)
 
-    const { id, creationDate, mealName, ingredients } = mealData[0]
-
-    const ingredientsArray = JSON.parse(ingredients)
-    const ingredientsData = []
-
-    for (let ingredient of ingredientsArray) {
-        const ingredientData = await getIngredientData(ingredient)
-        ingredientsData.push(ingredientData)
-    }
+    const { id, created_at, ingredients, name } = mealData[0]
+    const ingredientsJSON = JSON.parse(ingredients)
 
     return (
-        <div>
-            <h1 className="text-xl text-green-700">{mealName}</h1>
-            {ingredientsData.map((ingredient, index) => {
-                return (
-                    <FoodSearchResultCard foodData={ingredient} key={index} />
-                )
+        <div className="flex flex-col space-x-4 items-center">
+            <h1 className="text-2xl text-green-700">{name}</h1>
+            {ingredientsJSON.map((ingredient, index) => {
+                return <IngredientCard foodData={ingredient} key={index} />
             })}
 
             <DeleteMealButton mealId={params.id} />
