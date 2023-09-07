@@ -1,6 +1,6 @@
 "use client"
 import { useRef, useState } from "react"
-import FoodSearchResultCard from "./FoodSearchResultCard"
+import IngredientSearchCard from "./IngredientSearchCard"
 import { searchFoodDatabase } from "./serverActions"
 
 export default function Home() {
@@ -35,7 +35,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-2">
                     {data?.map((food, index) => {
                         return (
-                            <FoodSearchResultCard foodData={food} key={index} />
+                            <IngredientSearchCard foodData={food} key={index} />
                         )
                     })}
                 </div>
