@@ -26,9 +26,10 @@ export default function Home() {
                         className="border border-sky-950 p-2 my-2"
                         type="text"
                         ref={inputBox}
+                        placeholder="Ingredient name"
                     />
                     <button className="bg-sky-800 text-white p-2 rounded">
-                        Search Food
+                        Search
                     </button>
                 </form>
 
