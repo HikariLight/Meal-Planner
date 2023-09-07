@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic"
+export const revalidate = 0
+
 import { getMeal } from "@/app/serverActions"
 import DeleteMealButton from "./DeleteMealButton"
 import IngredientCard from "./IngredientCard"
