@@ -8,13 +8,13 @@ export default function AboutPage() {
                 <li>Meal Planner was made using NextJS 13 and Supabase</li>
                 <li>
                     The main goal is to be able to make conscious and educated
-                    decisions about one's eating habits and diet, by being able
-                    to create the meals one eats throughout the week and
+                    decisions about one&apos;s eating habits and diet, by being
+                    able to create the meals one eats throughout the week and
                     visualising their nutritional data when aggregated.
                 </li>
                 <li>
                     All the nutritional data comes from the United States
-                    Department of Agriculture's{" "}
+                    Department of Agriculture&apos;s{" "}
                     <span>
                         <a
                             className="text-indigo-500"
