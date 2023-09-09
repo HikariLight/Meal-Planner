@@ -1,10 +1,32 @@
-import Link from "next/link"
+"use client"
+
+import { useSelectedLayoutSegment } from "next/navigation"
+import { NavLink } from "@/components"
 
 export default function Navbar() {
+    const currentRoute = useSelectedLayoutSegment()
+
+    const routes = [
+        { name: null, label: "Home", path: "/", active: false },
+        { name: "meal", label: "Meals", path: "/meal", active: false },
+        { name: "about", label: "About", path: "#", active: false },
+        { name: "login", label: "Login", path: "#", active: false },
+        { name: "signup", label: "Signup", path: "#", active: false },
+    ]
+
     return (
-        <div className="h-full flex flex-row align-center justify-center space-x-4 bg-sky-950 text-white p-2">
-            <Link href="/">Home</Link>
-            <Link href="/meal">Meal</Link>
-        </div>
+        <nav className="items-center hidden text-lg text-gray-800 uppercase font-sen dark:text-white lg:flex">
+            {routes.map((route, index) => {
+                return (
+                    <NavLink
+                        route={route.path}
+                        routeName={route.name}
+                        currentRoute={currentRoute}
+                        label={route.label}
+                        key={index}
+                    />
+                )
+            })}
+        </nav>
     )
 }
