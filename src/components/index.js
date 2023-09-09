@@ -1,3 +1,4 @@
 import CustomButton from "./CustomButton"
+import NavLink from "./NavLink"
 
-export { CustomButton }
+export { CustomButton, NavLink }

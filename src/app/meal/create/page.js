@@ -60,8 +60,8 @@ export default function MealCreationPage() {
     }
 
     return (
-        <div className="h-full w-full">
-            <h1 className="text-2xl text-center text-sky-800 my-2">
+        <div className="h-full w-full dark:text-white">
+            <h1 className="text-2xl text-center text-indigo-700 dark:text-indigo-500 my-2">
                 Create a new meal
             </h1>
 
@@ -70,15 +70,17 @@ export default function MealCreationPage() {
                     Meal Created Successfully
                 </h1>
             ) : (
-                <div>
-                    <div className="grid grid-cols-2 gap-2">
-                        <div className="flex flex-col items-center border border-sky-800 p-4 text-center">
-                            <h3 className="text-xl text-sky-700">Meal Info</h3>
-                            <div className="flex flex-row items-center my-2">
+                <div className="grid place-items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 my-2">
+                        <div className="flex flex-col items-center border border-indigo-500 p-4 text-center">
+                            <h3 className="text-xl text-indigo-700 dark:text-indigo-500">
+                                Meal Info
+                            </h3>
+                            <div className="flex flex-col lg:flex-row items-center my-2">
                                 <label className="mx-2">Meal Name: </label>
                                 <input
                                     type="text"
-                                    className={`border border-sky-800 p-2 ${
+                                    className={`text-black border border-indigo-800 p-2 ${
                                         error ? "border-2 border-red-800" : ""
                                     }`}
                                     ref={mealNameInput}
@@ -97,7 +99,7 @@ export default function MealCreationPage() {
                                 <label className="mx-2">Ingredient: </label>
                                 <input
                                     type="text"
-                                    className="border border-sky-800 p-2 "
+                                    className="text-black border border-indigo-800 p-2 "
                                     onChange={(event) => {
                                         searchIngredient(event)
                                     }}
@@ -126,10 +128,12 @@ export default function MealCreationPage() {
                         />
                     </div>
 
-                    <CustomButton
-                        textValue={"Create Meal"}
-                        clickHandler={handleClick}
-                    />
+                    <div className="w-48">
+                        <CustomButton
+                            textValue={"Create Meal"}
+                            clickHandler={handleClick}
+                        />
+                    </div>
                 </div>
             )}
         </div>

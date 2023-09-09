@@ -12,8 +12,8 @@ export default async function MealPage({ params }) {
     const ingredientsJSON = JSON.parse(ingredients)
 
     return (
-        <div className="flex flex-col space-x-4 items-center">
-            <h1 className="text-2xl text-green-700">{name}</h1>
+        <div className="flex flex-col space-x-4 items-center dark:text-white">
+            <h1 className="text-2xl text-indigo-700">{name}</h1>
             {ingredientsJSON.map((ingredient, index) => {
                 return <IngredientCard foodData={ingredient} key={index} />
             })}

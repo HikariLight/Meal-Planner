@@ -9,11 +9,11 @@ export default async function FoodPage({ params }) {
     const foodData = await getFood(params.id)
 
     return (
-        <div className="border border-purple-800 rounded text-center p-2">
-            <h1 className="text-3xl my-2 text-emerald-800">
+        <div className="border border-indigo-600 rounded text-center dark:text-white p-2">
+            <h1 className="text-3xl my-2 text-indigo-700 dark:text-indigo-500">
                 Name: {foodData.description}
             </h1>
-            <h3 className="text-xl my-2 text-emerald-600">
+            <h3 className="text-xl my-2 text-indigo-600 dark:text-indigo-400">
                 Description: {foodData.foodCategory.description}
             </h3>
 
