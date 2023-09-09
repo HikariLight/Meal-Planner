@@ -9,7 +9,7 @@ export default function Navbar() {
     const routes = [
         { name: null, label: "Home", path: "/", active: false },
         { name: "meal", label: "Meals", path: "/meal", active: false },
-        { name: "about", label: "About", path: "#", active: false },
+        { name: "about", label: "About", path: "/about", active: false },
         { name: "login", label: "Login", path: "#", active: false },
         { name: "signup", label: "Signup", path: "#", active: false },
     ]
