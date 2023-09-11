@@ -22,7 +22,7 @@ export default function SearchPage() {
     return (
         <div className="w-full grid place-items-center">
             <h1 className="text-2xl text-indigo-700 uppercase text-center my-2">
-                Search Page
+                Search Ingredients Database
             </h1>
 
             <input
