@@ -21,7 +21,7 @@ export default function Hero() {
                             Sign Up
                         </Link>
                         <Link
-                            href="#"
+                            href="/search"
                             className="px-4 py-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 rounded dark:text-white hover:bg-gray-900 hover:text-white text-md"
                         >
                             Search
