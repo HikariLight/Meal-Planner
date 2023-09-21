@@ -1,3 +1,5 @@
+import NutritionalInfoCard from "@/app/meal/[id]/NutritionalInfoCard"
+
 async function getFood(id) {
     const apiLink = `https://api.nal.usda.gov/fdc/v1/food/${id}?api_key=${process.env.USDA_API_KEY}`
     const res = await fetch(apiLink)
@@ -17,16 +19,7 @@ export default async function FoodPage({ params }) {
                 Description: {foodData.foodCategory.description}
             </h3>
 
-            <div className="grid grid-cols-3">
-                {foodData.foodNutrients.map((data, index) => {
-                    return (
-                        <h3 key={index}>
-                            {data.nutrient.name}: {data.nutrient.number}
-                            {data.nutrient.unitName}
-                        </h3>
-                    )
-                })}
-            </div>
+            <NutritionalInfoCard foodData={foodData} />
         </div>
     )
 }
