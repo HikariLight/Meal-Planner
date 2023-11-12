@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
-    "@supabase/supabase-js": "^2.33.1",
-    "argon2": "^0.31.1",
+    "@supabase/supabase-js": "^2.38.4",
+    "argon2": "^0.31.2",
     "autoprefixer": "10.4.15",
     "encoding": "^0.1.13",
     "eslint": "8.47.0",
