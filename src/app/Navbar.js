@@ -11,8 +11,8 @@ export default function Navbar() {
         { name: "meal", label: "Meals", path: "/meal", active: false },
         { name: "search", label: "Search", path: "/search", active: false },
         { name: "about", label: "About", path: "/about", active: false },
-        { name: "login", label: "Login", path: "#", active: false },
-        { name: "signup", label: "Signup", path: "#", active: false },
+        { name: "login", label: "Login", path: "/login", active: false },
+        { name: "signup", label: "Signup", path: "/signup", active: false },
     ]
 
     return (
