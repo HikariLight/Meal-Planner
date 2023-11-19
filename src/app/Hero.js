@@ -15,7 +15,7 @@ export default function Hero() {
                     </h2>
                     <div className="flex items-center justify-center my-4">
                         <Link
-                            href="#"
+                            href="/signup"
                             className="px-4 py-2 mr-4 text-white uppercase bg-gray-800 border-2 border-transparent rounded text-md hover:bg-gray-900"
                         >
                             Sign Up
