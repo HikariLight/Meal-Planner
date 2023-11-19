@@ -1,6 +1,6 @@
 export default function AboutPage() {
     return (
-        <div className="text-white">
+        <div className="text-slate-900 dark:text-white">
             <h1 className="text-2xl text-center uppercase my-2 text-indigo-700 dark:text-indigo-500">
                 About Page
             </h1>
