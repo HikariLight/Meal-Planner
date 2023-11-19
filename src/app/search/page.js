@@ -26,7 +26,7 @@ export default function SearchPage() {
             </h1>
 
             <input
-                className="p-2 w-1/2 my-2"
+                className="p-2 w-1/2 my-2 border border-indigo-700"
                 type="text"
                 onChange={(event) => {
                     handleChange(event)
